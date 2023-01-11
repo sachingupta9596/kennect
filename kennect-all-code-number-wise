@@ -1,0 +1,232 @@
+// 7.1
+// for loop
+
+for(var i =0 ; i<5;i++){  // it will run five times from value = 0 to 4
+   // code , this code execute everytime for loop runs.
+   // we have initialized variable i with var keyword with value = 0 and then it will check the middle condition which is i less than 5 or not 
+   // if the condition true, then the code inside of for loop will run otherwise not.
+   // after executing the code , the last i++ will incrment the value of i and again the condition get checked... this for loop will run until the condition gets false.
+}
+
+// while loop
+ var i = 0;
+while(condition){ // while(i<5){i++}  it will run 5 times
+  // code here gets executed.
+  // same here we check for some conditon to be true  , if it is true , then the code inside of while loop runs otherwise not.
+  // We use for loop when we know beforehand the number of times loop is going to run.
+  // and while loop we use when we dont know that beforehand.
+}
+
+// continue
+
+
+for (var i = 0; i < 5; i++) {
+  if (i === 3) continue;  
+  // The continue statement breaks one iteration (in the loop) if a specified condition to be true and continues with the next iteration in the loop.
+  cout<<"hire me";
+}
+
+// If Else
+
+if(condition){
+// condition is true then if block runs otherwise 
+}else{
+  // condition false, else block will run
+}
+
+// switch keyword
+switch(expression) { // expression will be evaluated with a value
+// case runs which matches with expression and the code that written after the matching case will also run... that's why we are usin break keyword to break 
+// as our first matching case runs.
+// if no matching case there, then default case will run.
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+//Recursion -- Funtion calling itself is known as  Recursion until a certain base condition does not match
+
+function x(n){
+// base condition
+if(n==5){  // as the base condition match , function get return.
+// if we dont use base condition then it will continue call itself for infinite times.
+return;
+}
+ x(n++);
+}
+
+x(0);
+
+// Binary Search Tree
+
+class BinarySearchTree
+{
+    constructor()
+    {
+        // root of a binary search tree
+        this.root = null;
+    }
+ 
+    
+    // insert(data)
+    // insert node
+    
+// helper method which creates a new node to
+// be inserted and calls insertNode
+insert(data)
+{
+    // Creating a node and initialising
+    // with data
+    var newNode = new Node(data);
+                     
+    // root is null then node will
+    // be added to the tree and made root.
+    if(this.root === null)
+        this.root = newNode;
+    else
+ 
+        // find the correct position in the
+        // tree and add the node
+        this.insertNode(this.root, newNode);
+}
+ 
+// Method to insert a node in a tree
+// it moves over the tree to find the location
+// to insert a node with a given data
+insertNode(node, newNode)
+{
+    // if the data is less than the node
+    // data move left of the tree
+    if(newNode.data < node.data)
+    {
+        // if left is null insert node here
+        if(node.left === null)
+            node.left = newNode;
+        else
+ 
+            // if left is not null recur until
+            // null is found
+            this.insertNode(node.left, newNode);
+    }
+ 
+    // if the data is more than the node
+    // data move right of the tree
+    else
+    {
+        // if right is null insert node here
+        if(node.right === null)
+            node.right = newNode;
+        else
+ 
+            // if right is not null recur until
+            // null is found
+            this.insertNode(node.right,newNode);
+    }
+  } 
+}
+
+// IMPLEMENTAION OF getElementById
+
+let result = [];
+
+function getElementById(IdName){
+
+function getChildren(nodes){
+Object.keys(nodes.children).forEach((child)=>{
+  let childNode = nodes.children[child];
+  let attr = childNode.getAtrribute('id');
+  if(attr==IdName) result.push(childNode);
+  getChildren(childnode);
+})
+return;
+}
+
+const nodes = document.body;
+getChildren(nodes);
+}
+
+
+getElementById(Idname);
+
+console.log(result);
+
+// Checking Prime Number
+        function checkPrime(p){
+                for(let i = 3; i <= Math.sqrt(p); i+=2)
+                if (p % i === 0) {
+                    return true ;
+                }
+            return false;
+            }
+        // Function to check prime number
+        function prime() {
+             
+            var n; 
+            // Check and display alert message
+            if( n % 2 === 0 )
+                alert(n + " is not prime");
+            else if(check(n))
+                alert(n + " is not prime");
+                
+            else{
+                alert(n + " is prime"); 
+                return n;
+                }
+                
+        }
+// taking next prime to above prime number
+function nextPrime(primeNumber)
+{
+ 
+    // Base case
+    if (N <= 1)
+        return 2;
+ 
+    
+    bool found = false;
+ 
+    // Loop continuously until isPrime returns
+    // true for a number greater than n
+    while (!found) {
+        primeNumber++;
+ 
+        if (isPrime(primeNumber))
+            found = true;
+    }
+ 
+    return primeNumber;
+}
+
+// difference of two prime number
+
+var difference;
+var primeNumber = checkPrime(number)
+if(primeNumber){
+   difference = nextPrime(primeNumber) - primeNumber;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
